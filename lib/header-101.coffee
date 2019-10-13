@@ -19,7 +19,7 @@ module.exports = Header101 =
   insertTemplateStr: null
 
   dateTimeFormat: "YYYY/MM/DD HH:mm:ss"
-  mail: "%s@student.42.fr"
+  mail: "%s@student.101.fr"
   byName: "%s \<%s\>"
   timestampBy: "%s by %s"
 
@@ -29,7 +29,7 @@ module.exports = Header101 =
     # with a CompositeDisposable
     @subscriptions = new CompositeDisposable
 
-    @subscriptions.add atom.config.observe 'header-42.login', (login) =>
+    @subscriptions.add atom.config.observe 'header-101.login', (login) =>
       @login = login
 
     atom.workspace.observeTextEditors (editor) =>
@@ -37,7 +37,7 @@ module.exports = Header101 =
 
     # Register command that toggles this view
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'header-42:insert': => @insert()
+      'header-101:insert': => @insert()
 
   deactivate: ->
     @subscriptions.dispose()
@@ -85,7 +85,7 @@ module.exports = Header101 =
     sprintf(dirty_header, filename, byName, created, updated)
 
   hasHeader: (buffer) ->
-    byPat = /By: .{1,8} <.{1,8}@student\.42\.fr>/
+    byPat = /By: .{1,8} <.{1,8}@student\.101\.fr>/
     updatedPat = /Updated: \d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} by .{1,8}/
     createdPat = /Created: (\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}) by (.{1,8})/
 
