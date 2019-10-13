@@ -7,7 +7,7 @@ moment = require 'moment'
 
 String::rstrip = -> @replace /\s+$/g, ""
 
-module.exports = Header42 =
+module.exports = Header101 =
   config:
     login:
       type: 'string'
