@@ -19,7 +19,7 @@ module.exports = Header101 =
   insertTemplateStr: null
 
   dateTimeFormat: "YYYY/MM/DD HH:mm:ss"
-  mail: "%s@student.101.fr"
+  mail: "marvin@le-101.fr"
   byName: "%s \<%s\>"
   timestampBy: "%s by %s"
 
@@ -79,13 +79,13 @@ module.exports = Header101 =
     else
       login = createInfo[1]
       created = sprintf(@timestampBy, createInfo[0], login)
-    byName = sprintf(@byName, login, sprintf(@mail, login))
+    byName = sprintf(@byName, login, sprintf(@mail))
     updated = sprintf(@timestampBy, moment().format(@dateTimeFormat), @login)
 
     sprintf(dirty_header, filename, byName, created, updated)
 
   hasHeader: (buffer) ->
-    byPat = /By: .{1,8} <.{1,8}@student\.101\.fr>/
+    byPat = /By: .{1,8} marvin@le-101.fr/
     updatedPat = /Updated: \d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} by .{1,8}/
     createdPat = /Created: (\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}) by (.{1,8})/
 
