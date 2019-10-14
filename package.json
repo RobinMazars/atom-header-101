@@ -1,7 +1,7 @@
 {
   "name": "header-101",
   "main": "./lib/header-101",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Add the 101 header to your project files",
   "keywords": [
     "101",
