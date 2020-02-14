@@ -19,7 +19,7 @@ module.exports = Header101 =
   insertTemplateStr: null
 
   dateTimeFormat: "YYYY/MM/DD HH:mm:ss"
-  mail: "marvin@le-101.fr"
+  mail: "marvin@42.fr"
   byName: "%s \<%s\>"
   timestampBy: "%s by %s"
 
@@ -85,7 +85,7 @@ module.exports = Header101 =
     sprintf(dirty_header, filename, byName, created, updated)
 
   hasHeader: (buffer) ->
-    byPat = /By: .{1,8} marvin@le-101.fr/
+    byPat = /By: .{1,8} marvin@42.fr/
     updatedPat = /Updated: \d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} by .{1,8}/
     createdPat = /Created: (\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}) by (.{1,8})/
 
